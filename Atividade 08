@@ -1,0 +1,147 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.mavenproject1;
+
+/**
+ *
+ * @author rafael
+ */
+
+import java.lang.Math;
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+
+public class Mavenproject1 {
+
+    
+//    public static class Questao_01 {
+        
+//        public int delta(int a, int b, int c){
+//            return (b*b)-4*a*c;
+//        }
+        
+//        public double x1(int a, int b, int c){
+//            double raiz=Math.sqrt(delta(a, b, c));
+//            return (-b+raiz)/(2*a);
+//        }
+        
+//        public double x2(int a, int b, int c){
+//            double raiz=Math.sqrt(delta(a, b, c));
+//            return (-b-raiz)/(2*a);
+//        }
+//    }
+    
+    
+//    public static class Questao_02{
+//        
+//        public int soma(int a,int b){
+//            return a+b;
+//        }
+//        public int subtracao(int a, int b){
+//            return a-b;
+//        }
+//        public int multiplicacao(int a, int b){
+//            return a*b;
+//        }
+//        public double divisao(double a, double b){
+//            return a/b;
+//        }
+//    }
+    
+    public static void main(String[] args) {
+        Scanner entrada= new Scanner(System.in);
+        DecimalFormat df= new DecimalFormat("#.##");
+        
+//        Questao_01 calcular=new Questao_01();
+        
+//        int a=-3, b=4, c=2;
+        
+//        System.out.println("Dada a equação do 2° grau: -3x² + 4x + 2 = 0");
+//        System.out.println("Calcule o valor de x¹ e x² e mostre o resultado.\n");
+//        int delta = calcular.delta(a, b, c);
+//        System.out.println("Delta: "+delta);
+        
+//        if (delta<0){
+//            System.out.println("A equação não possui raízes reais.");
+ //       }
+ //       else {
+//            double x1=calcular.x1(a, b, c);
+//            double x2=calcular.x2(a, b, c);
+            
+//            System.out.println("X¹= "+df.format(x1));
+//            System.out.println("X²= "+df.format(x2));
+            
+//        }
+
+
+//        Questao_02 calcular= new Questao_02();
+//        
+//        int escolha, a, b;
+//        double resultado;
+//        do {
+//        System.out.println("===Menu=== \n1 - Soma \n2 - Subtração \n3 - Multiplicação \n4 - Divisão \n0 - Encerrar \n \nDigite a opção desejada (1, 2, 3, 4 ou 0): ");
+//        escolha=entrada.nextInt();
+//        switch (escolha){
+//            case 1:
+//                System.out.println("SOMAR");
+//                System.out.println("Digite o primeiro valor: ");
+//                a=entrada.nextInt();
+//                entrada.nextLine();
+//                System.out.println("Digite o segundo valor: ");
+//                b=entrada.nextInt();
+//                resultado=calcular.soma(a, b);
+//                System.out.println("Resultado: "+resultado);
+//                break;
+//            
+//            case 2:
+//                System.out.println("SUBTRAÇÃO");
+//                System.out.println("Digite o primeiro valor: ");
+//                a=entrada.nextInt();
+//                entrada.nextLine();
+//                System.out.println("Digite o segundo valor: ");
+//                b=entrada.nextInt();
+//                resultado=calcular.subtracao(a, b);
+//                System.out.println("Resultado: "+resultado);
+//                break;
+//                
+//            case 3:
+//                System.out.println("MULTIPLICAÇÃO");
+//                System.out.println("Digite o primeiro valor: ");
+//                a=entrada.nextInt();
+//                entrada.nextLine();
+//                System.out.println("Digite o segundo valor: ");
+//                b=entrada.nextInt();
+//                resultado=calcular.multiplicacao(a, b);
+//                System.out.println("Resultado: "+resultado);
+//                break;
+//                
+//            case 4:
+//                System.out.println("DIVISÃO");
+//                System.out.println("Digite o primeiro valor: ");
+//                a=entrada.nextInt();
+//                entrada.nextLine();
+//                System.out.println("Digite o segundo valor: ");
+//                b=entrada.nextInt();
+//                do{
+//                if (b<=0){
+//                    System.out.println("O segundo valor deve ser maior que zero!");
+//                    break;
+//                }else{
+//                    resultado=calcular.divisao(a, b);
+//                System.out.println("Resultado: "+resultado);
+//                break;
+//                }
+//                }while(b<=0);
+//                
+//        }
+//        }while(escolha!=0);
+//        System.out.println("Sistema encerrado!");
+
+
+        
+        
+    }
+}
