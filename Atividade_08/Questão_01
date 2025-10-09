@@ -1,0 +1,37 @@
+  //    public static class Questao_01 {
+
+    //        public int delta(int a, int b, int c){
+    //            return (b*b)-4*a*c;
+    //        }
+
+    //        public double x1(int a, int b, int c){
+    //            double raiz=Math.sqrt(delta(a, b, c));
+    //            return (-b+raiz)/(2*a);
+    //        }
+
+    //        public double x2(int a, int b, int c){
+    //            double raiz=Math.sqrt(delta(a, b, c));
+    //            return (-b-raiz)/(2*a);
+    //        }
+    //    }
+
+      //        Questao_01 calcular=new Questao_01();
+
+    //        int a=-3, b=4, c=2;
+
+    //        System.out.println("Dada a equação do 2° grau: -3x² + 4x + 2 = 0");
+    //        System.out.println("Calcule o valor de x¹ e x² e mostre o resultado.\n");
+    //        int delta = calcular.delta(a, b, c);
+    //        System.out.println("Delta: "+delta);
+
+    //        if (delta<0){
+    //            System.out.println("A equação não possui raízes reais.");
+     //       }
+     //       else {
+    //            double x1=calcular.x1(a, b, c);
+    //            double x2=calcular.x2(a, b, c);
+
+    //            System.out.println("X¹= "+df.format(x1));
+    //            System.out.println("X²= "+df.format(x2));
+
+    //        }
