@@ -1,0 +1,36 @@
+ //        public static class Questao_03{
+    //    
+    //        public void mes(int recebe){
+    //            switch(recebe){
+    //                case 1 -> System.out.println("Janeiro");
+    //                case 2 -> System.out.println("Fevereiro");
+    //                case 3 -> System.out.println("Março");
+    //                case 4 -> System.out.println("Abril");
+    //                case 5 -> System.out.println("Maio");
+    //                case 6 -> System.out.println("Junho");
+    //                case 7 -> System.out.println("Julho");
+    //                case 8 -> System.out.println("Agosto");
+    //                case 9 -> System.out.println("Setembro");
+    //                case 10 -> System.out.println("Outubro");
+    //                case 11 -> System.out.println("Novembro");
+    //                case 12 -> System.out.println("Dezembro");
+    //            }
+    //        }
+    //}
+
+ //        Questao_03 saida = new Questao_03();
+    //        int recebe;
+    //         do{
+    //        System.out.println("Digite o numero do mes desejado: ");
+    //        recebe = entrada.nextInt();
+    //        entrada.nextLine();
+    //       
+    //        if (recebe>=1 && recebe<=12){
+    //            saida.mes(recebe);
+    //        }
+    //        else{
+    //            System.out.println("Valor invalido!");
+    //        }
+    //        }while (recebe<1 || recebe>12);
+    //        entrada.close();
+    //        
