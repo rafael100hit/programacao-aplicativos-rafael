@@ -1,0 +1,26 @@
+//            public static class Questao_03MT{
+    //                public void mes(int recebe){
+    //                    String [] saida= {"Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"};
+    //                    int x=recebe-1;
+    //                    System.out.println(saida[x]);
+    //                }
+    //                
+    //            }
+
+
+
+//        Questao_03MT saida = new Questao_03MT();
+    //        int recebe;
+    //         do{
+    //        System.out.println("Digite o numero do mes desejado: ");
+    //        recebe = entrada.nextInt();
+    //        entrada.nextLine();
+    //       
+    //        if (recebe>=1 && recebe<=12){
+    //            saida.mes(recebe);
+    //        }
+    //        else{
+    //            System.out.println("Valor invalido!");
+    //        }
+    //        }while (recebe<1 || recebe>12);
+    //        entrada.close();
