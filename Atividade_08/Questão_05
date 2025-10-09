@@ -1,0 +1,35 @@
+ //            public static class Questao_06{
+    //                public void fibonacci(int escolha, Scanner entrada){
+    //                    int a=0, b=1;
+    //                    int[] elementos = new int [escolha];
+    //                    elementos[0]=0;
+    //                    elementos[1]=1;
+    //                    System.out.println("A sequencia de Fibonacci até a "+escolha+" posição será: ");
+    //                    System.out.print(elementos[0]+" - ");
+    //                    System.out.print(elementos[1]+" - ");
+    //                    for(int i=2; i<escolha; i++){
+    //                        int c=a+b;
+    //                        elementos[i]=c;
+    //                        a=b;
+    //                        b=c;
+    //                        System.out.print(elementos[i]+" - ");
+    //                    }
+    //                }
+    //            }
+
+
+
+
+//           Questao_05 mais_leve= new Questao_05();
+    //           int quantidade;
+    //           do{
+    //           System.out.println("Digite a quantidade de pessoas na sua lista.");
+    //           quantidade=entrada.nextInt();
+    //           if(quantidade>=1 && quantidade<=10){
+    //           mais_leve.leve(quantidade, entrada);
+    //           }
+    //           else{
+    //               System.out.println("Quantidade invalida! \nMaximo permitido 10 pessoas.");
+    //           }
+    //           }while(quantidade>10);
+    //           entrada.close();
