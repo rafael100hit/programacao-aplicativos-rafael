@@ -1,0 +1,80 @@
+ //    public static class Questao_02{
+    //        
+    //        public int soma(int a,int b){
+    //            return a+b;
+    //        }
+    //        public int subtracao(int a, int b){
+    //            return a-b;
+    //        }
+    //        public int multiplicacao(int a, int b){
+    //            return a*b;
+    //        }
+    //        public double divisao(double a, double b){
+    //            return a/b;
+    //        }
+    //    }
+
+
+
+//        Questao_02 calcular= new Questao_02();
+    //        
+    //        int escolha, a, b;
+    //        double resultado;
+    //        do {
+    //        System.out.println("===Menu=== \n1 - Soma \n2 - Subtração \n3 - Multiplicação \n4 - Divisão \n0 - Encerrar \n \nDigite a opção desejada (1, 2, 3, 4 ou 0): ");
+    //        escolha=entrada.nextInt();
+    //        switch (escolha){
+    //            case 1:
+    //                System.out.println("SOMAR");
+    //                System.out.println("Digite o primeiro valor: ");
+    //                a=entrada.nextInt();
+    //                entrada.nextLine();
+    //                System.out.println("Digite o segundo valor: ");
+    //                b=entrada.nextInt();
+    //                resultado=calcular.soma(a, b);
+    //                System.out.println("Resultado: "+resultado);
+    //                break;
+    //            
+    //            case 2:
+    //                System.out.println("SUBTRAÇÃO");
+    //                System.out.println("Digite o primeiro valor: ");
+    //                a=entrada.nextInt();
+    //                entrada.nextLine();
+    //                System.out.println("Digite o segundo valor: ");
+    //                b=entrada.nextInt();
+    //                resultado=calcular.subtracao(a, b);
+    //                System.out.println("Resultado: "+resultado);
+    //                break;
+    //                
+    //            case 3:
+    //                System.out.println("MULTIPLICAÇÃO");
+    //                System.out.println("Digite o primeiro valor: ");
+    //                a=entrada.nextInt();
+    //                entrada.nextLine();
+    //                System.out.println("Digite o segundo valor: ");
+    //                b=entrada.nextInt();
+    //                resultado=calcular.multiplicacao(a, b);
+    //                System.out.println("Resultado: "+resultado);
+    //                break;
+    //                
+    //            case 4:
+    //                System.out.println("DIVISÃO");
+    //                System.out.println("Digite o primeiro valor: ");
+    //                a=entrada.nextInt();
+    //                entrada.nextLine();
+    //                System.out.println("Digite o segundo valor: ");
+    //                b=entrada.nextInt();
+    //                do{
+    //                if (b<=0){
+    //                    System.out.println("O segundo valor deve ser maior que zero!");
+    //                    break;
+    //                }else{
+    //                    resultado=calcular.divisao(a, b);
+    //                System.out.println("Resultado: "+resultado);
+    //                break;
+    //                }
+    //                }while(b<=0);
+    //                
+    //        }
+    //        }while(escolha!=0);
+    //        System.out.println("Sistema encerrado!");
