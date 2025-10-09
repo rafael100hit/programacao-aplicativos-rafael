@@ -1,0 +1,33 @@
+ //            public static class Questao_04{
+    //                public void funcionario(int quantidade, Scanner entrada){
+    //                    String [] funcionarios = new String [quantidade];
+    //                    double [] salarios = new double [quantidade];
+    //                    double soma=0;
+    //                for (int i=0; i<quantidade; i++){
+    //                 entrada.nextLine();
+    //                 System.out.println("Digite o nome do funcionario: Num "+(i+1));
+    //                 funcionarios[i]=entrada.nextLine();
+    //                 System.out.println("Digite o salario do "+funcionarios[i]+" :");
+    //                 salarios[i]=entrada.nextDouble();
+    //                 soma=soma+salarios[i];
+    //                }
+    //                double media=soma/quantidade;
+    //                    System.out.println("Media salarial: R$"+media);
+    //                    System.out.println("Funcionarios com salario acima da média: ");
+    //                for(int i=0; i<quantidade; i++){
+    //                    
+    //                    if (salarios[i]>media){
+    //                        System.out.println(funcionarios[i]+" Salario: R$"+salarios[i]);
+    //                    }
+    //                }
+    //            }
+    //            }
+
+
+//         Questao_04 estatistica= new Questao_04();
+    //         int quantidade;
+    //         System.out.println("Digite a quantidade de funcionarios: ");
+    //         quantidade=entrada.nextInt();
+    //         
+    //         estatistica.funcionario(quantidade, entrada);
+    //         entrada.close();
