@@ -1,0 +1,146 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package questão_08_atividade_09;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author rafael
+ */
+public class Questão_08_Atividade_09 {
+    
+    public static class Atividade_009{
+        
+        public void menu(){
+            int escolha;
+            Aluno cadastro = null;
+            
+            do{
+            Scanner entrada = new Scanner(System.in);
+            
+            System.out.println("===== MENU =====");
+            System.out.println("1 - Cadastrar Aluno.");
+            System.out.println("2 - Visualizar Alunos cadastrados.");
+            System.out.println("3 - Encerrar o sistema.");
+            escolha = entrada.nextInt();
+            
+            switch (escolha){
+                case 1 -> cadastro = Aluno.cadastro();
+                case 2 -> {
+                    if(cadastro!=null){
+                    cadastro.exibir();
+                }else{
+                    System.out.println("Nenhum aluno cadastrado!");
+                }}
+                case 3 -> System.out.println("Encerrando o sistema!");
+                default -> System.out.println("Opção invalida! \nDigite 1, 2 ou 3.");
+            }
+            }while(escolha!=3);
+        }
+    }
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Atividade_009 iniciar = new Atividade_009();
+        iniciar.menu();
+    }
+    
+}
+
+
+
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package questão_08_atividade_09;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author rafael
+ */
+public class Aluno {
+    
+    public int matricula;
+    public String nome;
+    public double nota_prova_1;
+    public double nota_prova_2;
+    public double nota_trabalho;
+    public double media;
+    public double prova_final;
+    
+
+    public Aluno(int matricula, String nome, double nota_prova_1, double nota_prova_2, double nota_trabalho, double media, double prova_final){
+    this.matricula = matricula;
+    this.nome = nome;
+    this.nota_prova_1 = nota_prova_1;
+    this.nota_prova_2 = nota_prova_2;
+    this.nota_trabalho = nota_trabalho;
+    this.media = media;
+    this.prova_final = prova_final;
+}
+    
+    public static Aluno cadastro(){
+        Scanner entrada = new Scanner(System.in);
+        System.out.print("=== CADASTRO DE ALUNO ===\n");
+        
+        System.out.print("Matricula......: \n");
+        int matricula = entrada.nextInt();
+        entrada.nextLine();
+        
+        System.out.print("Nome...........: \n");
+        String nome = entrada.nextLine();
+        
+        System.out.print("Nota 1• prova..: \n");
+        double nota_prova_1 = entrada.nextDouble();
+        entrada.nextLine();
+        
+        System.out.print("Nota 2• prova..: \n");
+        double nota_prova_2 = entrada.nextDouble();
+        entrada.nextLine();
+        
+        System.out.print("Nota trabalho..: \n");
+        double nota_trabalho = entrada.nextDouble();
+        entrada.nextLine();
+        
+        double media = (nota_prova_1+nota_prova_2+nota_trabalho)/3;
+        System.out.print("Media..........: "+media+"\n");
+        
+        double prova_final = (nota_prova_1+nota_prova_2+nota_trabalho)-7;
+        if (prova_final<4.2){
+            System.out.printf("Prova final....: %2f \n", prova_final);
+        }
+        else{
+            System.out.printf("Prova final....: 0 \n");
+        }
+        
+        
+        
+        return new Aluno(matricula, nome, nota_prova_1, nota_prova_2, nota_trabalho, media, prova_final);
+    }
+    
+    public void exibir(){
+        System.out.print("Matricula......: "+matricula+"\n");
+        System.out.print("Nome...........: "+nome+"\n");
+        System.out.print("Nota 1• prova..: "+nota_prova_1+"\n");
+        System.out.print("Nota 2• prova..: "+nota_prova_2+"\n");
+        System.out.print("Nota trabalho..: "+nota_trabalho+"\n");
+        System.out.print("Media..........: "+media+"\n");
+        if (prova_final<4.2){
+            System.out.printf("Prova final....: %2f \n", prova_final);
+        }
+        else{
+            System.out.printf("Prova final....: 0 \n");
+        }
+    }
+    
+}
