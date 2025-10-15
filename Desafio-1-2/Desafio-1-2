@@ -584,23 +584,14 @@ public class ServicoCambio {
                             
                             extrato.salvarCompraDolar(quantidade, custo);
                              return false;
+}
 
-//                          if (pos_extrato < extrato.length){
-//                            extrato[pos_extrato]=("Deposito +US$"+df.format(quantidade));
-//                            pos_extrato++;
-//                            extrato[pos_extrato]=("Compra de USS: -R$"+df.format(custo));
-//                            pos_extrato++;
-                        }
                         else{
                             System.out.println("Operação cancelada.");
                     return false;
                         }
-//                            for (int i=0;i<extrato.length-1; i++) {
-//                            extrato[i]=extrato[i+1];
-//                            }
-//                            extrato[extrato.length-1]=("Deposito +US$"+df.format(quantidade));
-//                            extrato[extrato.length-1]=("Compra de USS: -R$"+df.format(custo));
-//                            }
+
+
                         }
                         
         }while(true);
