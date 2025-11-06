@@ -1,0 +1,97 @@
+// usuario.js
+import promptSync from 'prompt-sync';
+import pool from './db.js';
+import bcrypt from 'bcrypt';
+
+const prompt = promptSync();
+
+class Usuario {
+  // ============= CADASTRO DE NOVO USUÁRIO =============
+  async novoUsuario() {
+    let nome, email, senha;
+    const regexEmail = /^[\w.-]+@[\w.-]+\.[a-zA-Z]{2,6}$/;
+    const regexSenha = /^(?=.*[A-Z])(?=.*\d).{8,}$/;
+
+    // ======= Nome =======
+    do {
+      nome = prompt('Digite o nome: ');
+      if (nome.length < 10) {
+        console.log('O nome deve ter pelo menos 10 caracteres.');
+      }
+    } while (nome.length < 10);
+
+    // ======= Email =======
+    do {
+      email = prompt('Digite o email: ');
+      if (!regexEmail.test(email)) {
+        console.log('Digite um email válido! Exemplo: exemplo@dominio.com');
+      } else if (await this.emailExiste(email)) {
+        console.log('⚠️ Este email já está cadastrado! Tente outro.');
+        email = ''; // força repetição
+      }
+    } while (!regexEmail.test(email) || email === '');
+
+    // ======= Senha =======
+    do {
+      senha = prompt('Digite a senha: ');
+      if (!regexSenha.test(senha)) {
+        console.log('Senha inválida! Deve ter pelo menos 8 caracteres, uma letra maiúscula e um número.');
+      }
+    } while (!regexSenha.test(senha));
+
+    // ======= Criptografa e salva =======
+    const hash = await bcrypt.hash(senha, 10);
+    await this.salvarNoBanco(nome, email, hash);
+    console.log('✅ Usuário cadastrado com sucesso!');
+  }
+
+  // ============= SALVAR USUÁRIO =============
+  async salvarNoBanco(nome, email, senhaHash) {
+    const sql = 'INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?)';
+    try {
+      const [result] = await pool.execute(sql, [nome, email, senhaHash]);
+      console.log(`Usuário inserido com ID: ${result.insertId}`);
+    } catch (error) {
+      console.error('Erro ao salvar usuário:', error.message);
+    }
+  }
+
+  // ============= VERIFICAR SE EMAIL JÁ EXISTE =============
+  async emailExiste(email) {
+    const sql = 'SELECT id FROM usuarios WHERE email = ?';
+    const [rows] = await pool.execute(sql, [email]);
+    return rows.length > 0; // true se já existe
+  }
+
+  // ============= LISTAR USUÁRIOS =============
+  async listarUsuarios() {
+    const sql = 'SELECT id, nome, email FROM usuarios';
+    const [rows] = await pool.execute(sql);
+    console.table(rows);
+  }
+
+  // ============= LOGIN DE USUÁRIO =============
+  async login() {
+    const email = prompt('Email: ');
+    const senha = prompt('Senha: ');
+
+    const sql = 'SELECT * FROM usuarios WHERE email = ?';
+    const [rows] = await pool.execute(sql, [email]);
+
+    if (rows.length === 0) {
+      console.log('❌ Email não encontrado!');
+      return;
+    }
+
+    const usuario = rows[0];
+    const senhaCorreta = await bcrypt.compare(senha, usuario.senha);
+
+    if (senhaCorreta) {
+      console.log(`✅ Login bem-sucedido! Bem-vindo, ${usuario.nome}.`);
+    } else {
+      console.log('❌ Senha incorreta!');
+    }
+  }
+}
+
+export default Usuario;
