@@ -1,0 +1,38 @@
+// index.js
+import Usuario from './usuario.js';
+import promptSync from 'prompt-sync';
+
+const prompt = promptSync();
+const usuario = new Usuario();
+
+async function main() {
+  console.log('=== Sistema da Oficina ===');
+
+  let opcao;
+  do {
+    console.log('\n1 - Cadastrar novo usuário');
+    console.log('2 - Listar usuários');
+    console.log('3 - Login');
+    console.log('0 - Sair');
+    opcao = prompt('Escolha uma opção: ');
+
+    switch (opcao) {
+      case '1':
+        await usuario.novoUsuario();
+        break;
+      case '2':
+        await usuario.listarUsuarios();
+        break;
+      case '3':
+        await usuario.login();
+        break;
+      case '0':
+        console.log('Saindo...');
+        break;
+      default:
+        console.log('Opção inválida!');
+    }
+  } while (opcao !== '0');
+}
+
+main();
